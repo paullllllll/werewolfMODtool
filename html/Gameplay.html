@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Gameplay</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <head>
+    
+    <body>
+
+    	<script type="text/javascript">
+    		//https://api.myjson.com/bins/1b3ko  Custom Games
+    		//https://api.myjson.com/bins/3dorc All Roles
+    		$.ajax({
+				url: "https://api.myjson.com/bins/3dorc",
+				dataType: 'json',
+				//async: false,
+				success: function(data){
+					console.log(JSON.stringify(data));
+				}
+				
+			});
+    	</script>
+    
+    </body>
+    
+</html>
