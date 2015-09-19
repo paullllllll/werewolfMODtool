@@ -67,6 +67,8 @@
 
 		{"id":"33", "name":"Wolf Cub", "team":"Werewolf", "description":"Werewolf that wakes with other wolves. If killed, wolves kill two players the next night", "wake":"2", "villageImpact":"-8", "altRules":"none", "inPlay":"false"}
 
+		{"id":"34", "name":"Cursed", "team":"Other", "description":"The Cursed is a normal villager at the start of the game. If you are killed by the wolves, then you become a wolf. Otherwise, you simply die.", "wake":"0", "villageImpact":"-3", "altRules":"none", "inPlay":"false"},
+
 	]
 
 	}
