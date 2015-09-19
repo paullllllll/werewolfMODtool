@@ -1,8 +1,8 @@
 {
-	"quickSetups":[	
+	"scenarios":[	
 
 		{"numPlayers":"9", 
-		"scenarios":[
+		"villages":[
 			{"id":"1", 
 			"name":"Village of Doom", 
 			"roles":[
@@ -14,7 +14,7 @@
 		]},
 
 		{"numPlayers":"10",
-		"scenarios":[
+		"villages":[
 			{"id":"1",
 			"name":"Village of Uncertainty",
 			"roles":[
@@ -28,7 +28,7 @@
 		]},
 
 		{"numPlayers":"11",
-		"scenarios":[
+		"villages":[
 			{"id":"1",
 			"name":"Village of Atonement",
 			"roles":[
@@ -42,7 +42,7 @@
 		]},
 
 		{"numPlayers":"15", 
-		"scenarios":[
+		"villages":[
 			{"id":"1", 
 			"name":"Tiny Village, Big Secrets", 
 			"roles":[
@@ -60,7 +60,7 @@
 		]},
 
 		{"numPlayers":"16", 
-		"scenarios":[
+		"villages":[
 			{"id":"1", 
 			"name":"Classic Werewolf Village", 
 			"roles":[
@@ -75,7 +75,7 @@
 		]},
 
 		{"numPlayers":"20", 
-		"scenarios":[
+		"villages":[
 			{"id":"1", 
 			"name":"Village of Voices", 
 			"roles":[
@@ -96,7 +96,7 @@
 		]},
 
 		{"numPlayers":"21", 
-		"scenarios":[
+		"villages":[
 			{"id":"1", 
 			"name":"Party Village", 
 			"roles":[
@@ -117,7 +117,7 @@
 		]},
 
 		{"numPlayers":"22", 
-		"scenarios":[
+		"villages":[
 			{"id":"1", 
 			"name":"Village of Pain", 
 			"roles":[
