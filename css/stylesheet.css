@@ -1,0 +1,57 @@
+body{
+	background-color:#dddddd;
+}
+
+.hidden{
+	display:none;
+}
+
+.inList{
+	float:left;
+	width:10em;
+}
+
+.inListRight{
+	float:left;
+}
+
+.clockInputTi{
+	width:10em;
+}
+
+#playNumTi{
+	float:left;
+	width:12em;
+}
+
+#playnumIn{
+	float:right;
+}
+
+#playerNumForm{
+	
+}
+
+#rolesForm{
+	
+}
+
+#werewolves{
+	color:#990000;
+}
+
+#villagers{
+	color:#000099;
+}
+
+#others{
+	color:#994400;
+}
+
+#submitRoleNums{
+	clear: both;
+}
+
+#submitPlayerNum{
+	display:inline;
+}
