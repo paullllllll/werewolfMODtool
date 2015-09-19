@@ -1,73 +1,72 @@
 {
-	{"roles"[
+	"roles":[
 		
-		{"id":"1", "name":"Apprentice Seer", "team":"Village", "description":"If the seer dies, the apprentice seer takes their place", "wake":"3", "villageImpact":"4", "altRules":"none", "inPlay":"false"}
+		{"id":"1", "name":"Apprentice Seer", "team":"Village", "description":"If the seer dies, the apprentice seer takes their place", "wake":"3", "villageImpact":"4", "altRules":"none", "inPlay":"false"},
 		
-		{"id":"2", "name":"Aura Seer", "team":"Village", "description":"Looks at a player each night to see if they're not a villager or werewolf (eg. Special roles)", "wake":"2", "villageImpact":"3", "altRules":"none", "inPlay":"false"}
+		{"id":"2", "name":"Aura Seer", "team":"Village", "description":"Looks at a player each night to see if they're not a villager or werewolf (eg. Special roles)", "wake":"2", "villageImpact":"3", "altRules":"none", "inPlay":"false"},
 		
-		{"id":"3", "name":"Body Guard", "team":"Village", "description":"Protects a player each night (cannot protect self, cannot protect same player each night) Protected players cannot be elimnitaed that night", "wake":"2", "villageImpact":"3", "altRules":"none", "inPlay":"false"}
+		{"id":"3", "name":"Body Guard", "team":"Village", "description":"Protects a player each night (cannot protect self, cannot protect same player each night) Protected players cannot be elimnitaed that night", "wake":"2", "villageImpact":"3", "altRules":"none", "inPlay":"false"},
 		
-		{"id":"4", "name":"Cult Leader", "team":"Other", "description":"Picks a player each night to join cult, if all players in game are cult members, then cult leader wins (victory conditions for other teams apply as well)", "wake":"2", "villageImpact":"1", "altRules":"none", "inPlay":"false"}
+		{"id":"4", "name":"Cult Leader", "team":"Other", "description":"Picks a player each night to join cult, if all players in game are cult members, then cult leader wins (victory conditions for other teams apply as well)", "wake":"2", "villageImpact":"1", "altRules":"none", "inPlay":"false"},
 		
-		{"id":"5", "name":"Cupid", "team":"Village", "description":"Wakes first night and picks two players to become sweethearts. If one sweetheart dies, the other dies immediately. If both sweethearts are on the same team, they win with that team. If they are on separate teams, they are their own team and only win if they are the last two in the game)", "wake":"1", "villageImpact":"-3", "altRules":"none", "inPlay":"false"}
+		{"id":"5", "name":"Cupid", "team":"Village", "description":"Wakes first night and picks two players to become sweethearts. If one sweetheart dies, the other dies immediately. If both sweethearts are on the same team, they win with that team. If they are on separate teams, they are their own team and only win if they are the last two in the game)", "wake":"1", "villageImpact":"-3", "altRules":"none", "inPlay":"false"},
 		
-		{"id":"6", "name":"Diseased", "team":"Village", "description":"If werewolves kill the Diseased, they skip killing the next night due to being sick. Wolves still pick a target the next night but target is not killed", "wake":"0", "villageImpact":"3", "altRules":"none", "inPlay":"false"}
+		{"id":"6", "name":"Diseased", "team":"Village", "description":"If werewolves kill the Diseased, they skip killing the next night due to being sick. Wolves still pick a target the next night but target is not killed", "wake":"0", "villageImpact":"3", "altRules":"none", "inPlay":"false"},
 		
-		{"id":"7", "name":"Doppelgaenger", "team":"Village", "description":"Select player on the first night, then take their role when they die. They appear as villagers but can turn into a werewolf if they select one to copy", "wake":"1", "villageImpact":"", "altRules":"none", "inPlay":"false"}
+		{"id":"7", "name":"Doppelgaenger", "team":"Village", "description":"Select player on the first night, then take their role when they die. They appear as villagers but can turn into a werewolf if they select one to copy", "wake":"1", "villageImpact":"", "altRules":"none", "inPlay":"false"},
 		
-		{"id":"8", "name":"Drunk", "team":"Village", "description":"Normal villager the first two nights, then becomes a randomly assigned role after the third night (out of a pool of a werewolf, villager, and \" most or all other special roles\"", "wake":"3", "villageImpact":"4", "altRules":"Drunk gets to pick role from roles that have died", "inPlay":"false"}
+		{"id":"8", "name":"Drunk", "team":"Village", "description":"Normal villager the first two nights, then becomes a randomly assigned role after the third night (out of a pool of a werewolf, villager, and \" most or all other special roles\"", "wake":"3", "villageImpact":"4", "altRules":"Drunk gets to pick role from roles that have died", "inPlay":"false"},
 		
-		{"id":"9", "name":"Ghost", "team":"Village", "description":"Elimated the first night, then writes 10 letters at the end of the first night as a \"message from beyond\". Letters are revealed one at a time in order at the beginning of each day. Limitations on writing letters are that it cannot identify players by name or initials", "wake":"3", "villageImpact":"2", "altRules":"none", "inPlay":"false"}
+		{"id":"9", "name":"Ghost", "team":"Village", "description":"Elimated the first night, then writes 10 letters at the end of the first night as a \"message from beyond\". Letters are revealed one at a time in order at the beginning of each day. Limitations on writing letters are that it cannot identify players by name or initials", "wake":"3", "villageImpact":"2", "altRules":"none", "inPlay":"false"},
 		
-		{"id":"10", "name":"Hoodlum", "team":"Other", "description":"Picks two players on the first night. If at the end of the game, both those players are dead and the hoodlum is alive, hoodlum wins along with the villagers", "wake":"1", "villageImpact":"0", "altRules":"none", "inPlay":"false"}
+		{"id":"10", "name":"Hoodlum", "team":"Other", "description":"Picks two players on the first night. If at the end of the game, both those players are dead and the hoodlum is alive, hoodlum wins along with the villagers", "wake":"1", "villageImpact":"0", "altRules":"none", "inPlay":"false"},
 		
-		{"id":"11", "name":"Hunter", "team":"Village", "description":"Whenever hunter is eliminated, he kills someone before dying himself. Can also choose to kill no one. If killed during night, he chooses a target first thing in the morning. Players can't talk while he's choosing a target", "wake":"2", "villageImpact":"3", "altRules":"none", "inPlay":"false"}
+		{"id":"11", "name":"Hunter", "team":"Village", "description":"Whenever hunter is eliminated, he kills someone before dying himself. Can also choose to kill no one. If killed during night, he chooses a target first thing in the morning. Players can't talk while he's choosing a target", "wake":"2", "villageImpact":"3", "altRules":"none", "inPlay":"false"},
 		
-		{"id":"12", "name":"", "team":"", "description":"", "wake":"", "villageImpact":"", "altRules":"none", "inPlay":"false"}
+		{"id":"12", "name":"Lone Wolf", "team":"Werewolf", "description":"Only wins if he's the last player remaining, or ties by surviving with a single other non werewolf. ", "wake":"2", "villageImpact":"-5", "altRules":"none", "inPlay":"false"},
 		
-		{"id":"13", "name":"", "team":"", "description":"", "wake":"", "villageImpact":"", "altRules":"none", "inPlay":"false"}
+		{"id":"13", "name":"Lycan", "team":"Village", "description":"Appears to seer/PI as a werewolf, but just a villager otherwise", "wake":"0", "villageImpact":"-1", "altRules":"none", "inPlay":"false"},
 		
-		{"id":"14", "name":"", "team":"", "description":"", "wake":"", "villageImpact":"", "altRules":"none", "inPlay":"false"}
+		{"id":"14", "name":"Mason", "team":"Village", "description":"First night, masons wake and look around to see other masons. No one is allowed to talk about maons directly or indirectly during the game, if they do they are killed during the night by the secret society. If killed this way, they lose even if the team they are a part of wins.", "wake":"1", "villageImpact":"2", "altRules":"none", "inPlay":"false"},
 		
-		{"id":"15", "name":"", "team":"", "description":"", "wake":"", "villageImpact":"", "altRules":"none", "inPlay":"false"}
+		{"id":"15", "name":"Mayor", "team":"Village", "description":"When voting to eliminate during the day, mayor's vote counts twice", "wake":"0", "villageImpact":"2", "altRules":"Alternate: A mayor role is not given but players vote at the beginning of the game for a mayor, and vote for a new one if that one dies", "inPlay":"false"},
 		
-		{"id":"16", "name":"", "team":"", "description":"", "wake":"", "villageImpact":"", "altRules":"none", "inPlay":"false"}
+		{"id":"16", "name":"", "team":"", "description":"", "wake":"", "villageImpact":"", "altRules":"none", "inPlay":"false"},
 		
-		{"id":"17", "name":"", "team":"", "description":"", "wake":"", "villageImpact":"", "altRules":"none", "inPlay":"false"}
+		{"id":"17", "name":"", "team":"", "description":"", "wake":"", "villageImpact":"", "altRules":"none", "inPlay":"false"},
 		
-		{"id":"18", "name":"", "team":"", "description":"", "wake":"", "villageImpact":"", "altRules":"none", "inPlay":"false"}
+		{"id":"18", "name":"", "team":"", "description":"", "wake":"", "villageImpact":"", "altRules":"none", "inPlay":"false"},
 		
-		{"id":"19", "name":"", "team":"", "description":"", "wake":"", "villageImpact":"", "altRules":"none", "inPlay":"false"}
+		{"id":"19", "name":"", "team":"", "description":"", "wake":"", "villageImpact":"", "altRules":"none", "inPlay":"false"},
 		
-		{"id":"20", "name":"", "team":"", "description":"", "wake":"", "villageImpact":"", "altRules":"none", "inPlay":"false"}
+		{"id":"20", "name":"", "team":"", "description":"", "wake":"", "villageImpact":"", "altRules":"none", "inPlay":"false"},
 		
-		{"id":"21", "name":"", "team":"", "description":"", "wake":"", "villageImpact":"", "altRules":"none", "inPlay":"false"}
+		{"id":"21", "name":"", "team":"", "description":"", "wake":"", "villageImpact":"", "altRules":"none", "inPlay":"false"},
 		
-		{"id":"22", "name":"", "team":"", "description":"", "wake":"", "villageImpact":"", "altRules":"none", "inPlay":"false"}
+		{"id":"22", "name":"", "team":"", "description":"", "wake":"", "villageImpact":"", "altRules":"none", "inPlay":"false"},
 		
-		{"id":"23", "name":"", "team":"", "description":"", "wake":"", "villageImpact":"", "altRules":"none", "inPlay":"false"}
+		{"id":"23", "name":"", "team":"", "description":"", "wake":"", "villageImpact":"", "altRules":"none", "inPlay":"false"},
 		
-		{"id":"24", "name":"", "team":"", "description":"", "wake":"", "villageImpact":"", "altRules":"none", "inPlay":"false"}
+		{"id":"24", "name":"", "team":"", "description":"", "wake":"", "villageImpact":"", "altRules":"none", "inPlay":"false"},
 		
-		{"id":"25", "name":"", "team":"", "description":"", "wake":"", "villageImpact":"", "altRules":"none", "inPlay":"false"}
+		{"id":"25", "name":"", "team":"", "description":"", "wake":"", "villageImpact":"", "altRules":"none", "inPlay":"false"},
 		
-		{"id":"26", "name":"", "team":"", "description":"", "wake":"", "villageImpact":"", "altRules":"none", "inPlay":"false"}
+		{"id":"26", "name":"", "team":"", "description":"", "wake":"", "villageImpact":"", "altRules":"none", "inPlay":"false"},
 		
-		{"id":"27", "name":"", "team":"", "description":"", "wake":"", "villageImpact":"", "altRules":"none", "inPlay":"false"}
+		{"id":"27", "name":"", "team":"", "description":"", "wake":"", "villageImpact":"", "altRules":"none", "inPlay":"false"},
 		
-		{"id":"28", "name":"", "team":"", "description":"", "wake":"", "villageImpact":"", "altRules":"none", "inPlay":"false"}
+		{"id":"28", "name":"", "team":"", "description":"", "wake":"", "villageImpact":"", "altRules":"none", "inPlay":"false"},
 		
-		{"id":"29", "name":"", "team":"", "description":"", "wake":"", "villageImpact":"", "altRules":"none", "inPlay":"false"}
+		{"id":"29", "name":"", "team":"", "description":"", "wake":"", "villageImpact":"", "altRules":"none", "inPlay":"false"},
 		
-		{"id":"30", "name":"", "team":"", "description":"", "wake":"", "villageImpact":"", "altRules":"none", "inPlay":"false"}
+		{"id":"30", "name":"", "team":"", "description":"", "wake":"", "villageImpact":"", "altRules":"none", "inPlay":"false"},
 		
-		{"id":"31", "name":"", "team":"", "description":"", "wake":"", "villageImpact":"", "altRules":"none", "inPlay":"false"}
+		{"id":"31", "name":"", "team":"", "description":"", "wake":"", "villageImpact":"", "altRules":"none", "inPlay":"false"},
 		
-		{"id":"32", "name":"", "team":"", "description":"", "wake":"", "villageImpact":"", "altRules":"none", "inPlay":"false"}
+		{"id":"32", "name":"", "team":"", "description":"", "wake":"", "villageImpact":"", "altRules":"none", "inPlay":"false"},
 
-		{"id":"33", "name":"", "team":"", "description":"", "wake":"", "villageImpact":"", "altRules":"none", "inPlay":"false"}
+		{"id":"33", "name":"", "team":"", "description":"", "wake":"", "villageImpact":"", "altRules":"none", "inPlay":"false"},
 
 	]
 
 	}
-}
