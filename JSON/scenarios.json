@@ -88,7 +88,7 @@
 				{"name":"Ghost", "id":"9", "amount":"1"},
 				{"name":"Troublemaker", "id":"27", "amount":"1"},
 				{"name":"Werewolf", "id":"31", "amount":"2"},
-				{"name":"Wolf Cub", "id":"33", "amount":"2"},
+				{"name":"Wolf Cub", "id":"33", "amount":"1"},
 				{"name":"Sorceress", "id":"23", "amount":"1"},
 				{"name":"Lone Wolf", "id":"12", "amount":"1"},
 				{"name":"Drunk", "id":"8", "amount":"1"}
@@ -131,7 +131,7 @@
 				{"name":"Tough Guy", "id":"26", "amount":"1"},
 				{"name":"Lycan", "id":"13", "amount":"1"},
 				{"name":"Werewolf", "id":"31", "amount":"4"},
-				{"name":"Wolf Cub", "id":"33", "amount":"2"}
+				{"name":"Wolf Cub", "id":"33", "amount":"1"}
 			]},
 
 			{"id":"2", 
@@ -153,7 +153,59 @@
 				{"name":"Werewolf", "id":"31", "amount":"4"},
 				{"name":"Cursed", "id":"31", "amount":"1"}
 			]}
+		]},
+
+		{"numPlayers":"33", 
+		"scenarios":[
+			{"id":"1", 
+			"name":"Village, Incorporated", 
+			"roles":[
+				{"name":"Villager", "id":"30", "amount":"11"},
+				{"name":"Seer", "id":"22", "amount":"1"},
+				{"name":"Mayor", "id":"15", "amount":"1"},
+				{"name":"Prince", "id":"21", "amount":"1"},
+				{"name":"Ghost", "id":"9", "amount":"1"},
+				{"name":"Apprentice Seer", "id":"1", "amount":"1"},
+				{"name":"Witch", "id":"32", "amount":"1"},
+				{"name":"Diseased", "id":"6", "amount":"1"},
+				{"name":"Tough Guy", "id":"26", "amount":"1"},
+				{"name":"Hunter", "id":"11", "amount":"1"},
+				{"name":"Cupid", "id":"5", "amount":"1"},
+				{"name":"Old Hag", "id":"17", "amount":"1"},
+				{"name":"Old Man", "id":"35", "amount":"1"},
+				{"name":"Cult Leader", "id":"4", "amount":"1"},
+				{"name":"Tanner", "id":"25", "amount":"1"},
+				{"name":"Werewolf", "id":"31", "amount":"6"},
+				{"name":"Cursed", "id":"31", "amount":"1"}
+				{"name":"Sorceress", "id":"23", "amount":"1"}
+			]}
+		]},
+
+		{"numPlayers":"35", 
+		"scenarios":[
+			{"id":"1", 
+			"name":"Big Village, Tiny Secrets", 
+			"roles":[
+				{"name":"Villager", "id":"30", "amount":"10"},
+				{"name":"Seer", "id":"22", "amount":"1"},
+				{"name":"Lycan", "id":"13", "amount":"1"},
+				{"name":"Witch", "id":"32", "amount":"1"},
+				{"name":"Mason", "id":"14", "amount":"3"},
+				{"name":"Aura Seer", "id":"2", "amount":"1"},
+				{"name":"P.I.", "id":"18", "amount":"1"},
+				{"name":"Spellcaster", "id":"24", "amount":"1"},
+				{"name":"Priest", "id":"20", "amount":"1"},
+				{"name":"Body Guard", "id":"3", "amount":"1"},
+				{"name":"Village Idiot", "id":"29", "amount":"1"},
+				{"name":"Pacifist", "id":"19", "amount":"1"},
+				{"name":"Troublemaker", "id":"27", "amount":"1"},
+				{"name":"Werewolf", "id":"31", "amount":"6"},
+				{"name":"Minion", "id":"16", "amount":"1"},
+				{"name":"Lone Wolf", "id":"12", "amount":"1"},
+				{"name":"Vampire", "id":"28", "amount":"3"}
+			]}
 		]}
+
 
 	]
 		

@@ -1,0 +1,17 @@
+{"name":"", "id":"", "amount":""},
+
+
+//Scenario template
+{"numPlayers":"", 
+		"scenarios":[
+			{"id":"1", 
+			"name":"Village of ", 
+			"roles":[
+				{"name":"Villager", "id":"30", "amount":""},
+				{"name":"Seer", "id":"22", "amount":"1"}
+			]}
+		]}
+
+
+//Role template
+{"id":"", "name":"", "team":"", "description":"", "wake":"", "villageImpact":"", "altRules":"none", "inPlay":"false"},
