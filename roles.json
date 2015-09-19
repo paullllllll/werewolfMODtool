@@ -1,0 +1,73 @@
+{
+	{"roles"[
+		
+		{"name":"Apprentice Seer", "team":"Village", "description":"If the seer dies, the apprentice seer takes their place", "wake":"Every night after original seer dies", "villageImpact":"4", "altRules":"none"}
+		
+		{"name":"", "team":"", "description":"", "wake":"", "villageImpact":"", "altRules"}
+		
+		{"name":"", "team":"", "description":"", "wake":"", "villageImpact":"", "altRules"}
+		
+		{"name":"", "team":"", "description":"", "wake":"", "villageImpact":"", "altRules"}
+		
+		{"name":"", "team":"", "description":"", "wake":"", "villageImpact":"", "altRules"}
+		
+		{"name":"", "team":"", "description":"", "wake":"", "villageImpact":"", "altRules"}
+		
+		{"name":"", "team":"", "description":"", "wake":"", "villageImpact":"", "altRules"}
+		
+		{"name":"", "team":"", "description":"", "wake":"", "villageImpact":"", "altRules"}
+		
+		{"name":"", "team":"", "description":"", "wake":"", "villageImpact":"", "altRules"}
+		
+		{"name":"", "team":"", "description":"", "wake":"", "villageImpact":"", "altRules"}
+		
+		{"name":"", "team":"", "description":"", "wake":"", "villageImpact":"", "altRules"}
+		
+		{"name":"", "team":"", "description":"", "wake":"", "villageImpact":"", "altRules"}
+		
+		{"name":"", "team":"", "description":"", "wake":"", "villageImpact":"", "altRules"}
+		
+		{"name":"", "team":"", "description":"", "wake":"", "villageImpact":"", "altRules"}
+		
+		{"name":"", "team":"", "description":"", "wake":"", "villageImpact":"", "altRules"}
+		
+		{"name":"", "team":"", "description":"", "wake":"", "villageImpact":"", "altRules"}
+		
+		{"name":"", "team":"", "description":"", "wake":"", "villageImpact":"", "altRules"}
+		
+		{"name":"", "team":"", "description":"", "wake":"", "villageImpact":"", "altRules"}
+		
+		{"name":"", "team":"", "description":"", "wake":"", "villageImpact":"", "altRules"}
+		
+		{"name":"", "team":"", "description":"", "wake":"", "villageImpact":"", "altRules"}
+		
+		{"name":"", "team":"", "description":"", "wake":"", "villageImpact":"", "altRules"}
+		
+		{"name":"", "team":"", "description":"", "wake":"", "villageImpact":"", "altRules"}
+		
+		{"name":"", "team":"", "description":"", "wake":"", "villageImpact":"", "altRules"}
+		
+		{"name":"", "team":"", "description":"", "wake":"", "villageImpact":"", "altRules"}
+		
+		{"name":"", "team":"", "description":"", "wake":"", "villageImpact":"", "altRules"}
+		
+		{"name":"", "team":"", "description":"", "wake":"", "villageImpact":"", "altRules"}
+		
+		{"name":"", "team":"", "description":"", "wake":"", "villageImpact":"", "altRules"}
+		
+		{"name":"", "team":"", "description":"", "wake":"", "villageImpact":"", "altRules"}
+		
+		{"name":"", "team":"", "description":"", "wake":"", "villageImpact":"", "altRules"}
+		
+		{"name":"", "team":"", "description":"", "wake":"", "villageImpact":"", "altRules"}
+		
+		{"name":"", "team":"", "description":"", "wake":"", "villageImpact":"", "altRules"}
+		
+		{"name":"", "team":"", "description":"", "wake":"", "villageImpact":"", "altRules"}
+
+		{"name":"", "team":"", "description":"", "wake":"", "villageImpact":"", "altRules"}
+
+	]
+
+	}
+}
