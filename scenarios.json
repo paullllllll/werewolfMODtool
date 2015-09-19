@@ -25,7 +25,7 @@
 				{"name":"Werewolf", "id":"31", "amount":"1"},
 				{"name":"Sorceress", "id":"23", "amount":"1"}
 			]}
-		]}
+		]},
 
 		{"numPlayers":"11",
 		"scenarios":[
@@ -38,6 +38,16 @@
 			{"name":"Werewolf", "id":"31", "amount":"1"},
 			{"name":"Lone Wolf", "id":"12", "amount":"1"},
 			{"name":"Sorceress", "id":"23", "amount":"1"}
+			]}
+		]},
+
+		{"numPlayers":"15", 
+		"scenarios":[
+			{"id":"1", 
+			"name":"Village of Big Secrets", 
+			"roles":[
+				{"name":"Villager", "id":"30", "amount":"4"},
+				{"name":"Seer", "id":"22", "amount":"1"}
 			]}
 		]}
 
