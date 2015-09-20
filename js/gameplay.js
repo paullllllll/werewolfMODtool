@@ -15,6 +15,13 @@ var getData = function (callback){
     });
 }
 
+
+var day = function(){
+
+    console.log("I am a function");
+
+};
+
 var run = function (){
 
     getData(function(data){
@@ -67,7 +74,7 @@ var run = function (){
 var firstNightStart = function (data, allRoleData){
 
     var firstNightOrder =[];
-    var i;
+    var i,count;
     var firstNightPlayers =[];
     var firstNightBool = [false,false,false,false,false,false,false,false];
     var day = false;
@@ -143,7 +150,17 @@ var firstNightStart = function (data, allRoleData){
     }
 
     $("#night").click(function(){
-        if(firstNightBool !== null){
+        if(firstNightBool !== null&& day!=true){
+            for(i=0,count=0;i<firstNightBool.length;i++){
+
+                if(firstNightBool[i]==false){
+                    count++;
+                }
+                if(count==8){
+                    day=true;
+                }
+
+            }
             $("#night").text("Next Group");
             // console.log("gothere   ");
                 if(firstNightBool[0]==true){
@@ -187,21 +204,13 @@ var firstNightStart = function (data, allRoleData){
                     $("#main").text("Minion's Turn - Minion's Description: "+allRoleData.roles[15].desc);
                     firstNightBool[7]=false;
                 }
-                else {
-                    day(data, allRoleData);
-                }
         }
         else{
-            console.log('not loaded');
+            day();
         }
     })
 }
 
-var day = function (gameData, roleData){
-
-    console.log("I am a function");
 
 
-}
-
-run();
+$(document).ready(run);
