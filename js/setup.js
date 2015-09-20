@@ -1,5 +1,6 @@
 var main = function(){
 	//reset();
+	
 	setup();
 };
 
@@ -24,6 +25,7 @@ var setup = function(){
 			load();
 			event.preventDefault();
 			console.log('player num submitted: '+pNum); //debug player num submission
+			location.reload();
 		});
 		
 		
@@ -36,11 +38,19 @@ var setup = function(){
 				console.log(roleNumList[i]);
 			}
 			event.preventDefault();
+			location.reload();
 		});
 		
-		//$('#)
+		$('#clockForm').submit(function(){		//retrieve day length
+			load();
+			dayLength=parseInt($(this).serializeArray()[0].value) * 60 + parseInt($(this).serializeArray()[1].value);	//convert into seconds
+			save();
+			load();
+			console.log(dayLength);
+			event.preventDefault();
+			location.reload();
+		});
 		
-		save();
 	}else if(quick){	//quick setup functions-------------------
 		
 	}
@@ -62,6 +72,7 @@ var load = function(){
 	custom=JSON.parse(localStorage.getItem('custom'));
 	customResult=JSON.parse(localStorage.getItem('customResult'));
 	roleNumList=JSON.parse(localStorage.getItem('roleNumList'));
+	tempList=JSON.parse(localStorage.getItem('tempList'));
 }
 var save = function(){
 	localStorage.setItem("list", JSON.stringify(list));
@@ -73,6 +84,7 @@ var save = function(){
 	localStorage.setItem("custom", JSON.stringify(custom));
 	localStorage.setItem("customResult", JSON.stringify(customResult));
 	localStorage.setItem("roleNumList", JSON.stringify(roleNumList));
+	localStorage.setItem("tempList", JSON.stringify(tempList));
 }
 var reset = function(){
 	localStorage.clear();
@@ -92,5 +104,6 @@ var quick=false;
 var custom=true;
 var customResult=Object();
 var roleNumList=[];
+var tempList=[];
 
 $(document).ready(main);
