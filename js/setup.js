@@ -17,6 +17,9 @@ var setup = function(){
 		quick=false;
 		custom=true;
 	});
+	$('#reset').click(function(){
+		reset();
+	});
 	
 	if(custom){			//custom setup functions-----------------
 		load();
@@ -60,9 +63,11 @@ var setup = function(){
 
 /*Sign in Sheet*/
 var signIn = function(){
+	load();
 	$('#playerNameForm').submit(function(){
 		load();
-		list.push({name:$('input:first').val(), role:"null"});
+		event.preventDefault();
+		list.push({name:$('input:first').val(), role:""});
 		assignRole();
 		console.log(list[count].name + "is a " + list[count].role);
 		count+=1;
@@ -75,9 +80,10 @@ var signIn = function(){
 /*Assign randomized role to Player*/
 var assignRole = function(){
 	load();
-	var randIndex=Math.floor(Math.Random()*roleList.length);
-	list[count].role=roleList[randIndex].name;
-	roleList.splice(randIndex);
+	randIndex=1;//Math.floor(Math.random()*(roleList.length)+1);
+	save();
+	//list[count].role=roleList[randIndex].name;
+	//roleList.splice(randIndex);
 	save();
 	load();
 }
@@ -173,6 +179,7 @@ var load = function(){
 	tempPerson=JSON.parse(localStorage.getItem('tempPerson'));
 	count=JSON.parse(localStorage.getItem('count'));
 	roleList=JSON.parse(localStorage.getItem('roleList'));
+	randIndex=parseInt(JSON.parse(localStorage.getItem('randIndex')));
 }
 var save = function(){
 	localStorage.setItem("list", JSON.stringify(list));
@@ -188,10 +195,24 @@ var save = function(){
 	localStorage.setItem("tempPerson", JSON.stringify(tempPerson));
 	localStorage.setItem("count", JSON.stringify(count));
 	localStorage.setItem("roleList", JSON.stringify(roleList));
+	localStorage.setItem("randIndex", JSON.stringify(randIndex));
 }
 var reset = function(){
 	localStorage.clear();
 	list=[];
+	dayLength=0;
+	pNum=0;
+	pName="";
+	tempRole="";
+	quick=false;
+	custom=true;
+	customResult=Object();
+	roleNumList=[];
+	tempList=[];
+	tempPerson = {};
+	count=0;
+	roleList=[];
+	randIndex=0;
 	save();
 	location.reload();
 }
@@ -212,5 +233,7 @@ var tempList=[];
 var tempPerson = {};
 var count=0;
 var roleList=[];
+var randIndex=1;
+
 
 $(document).ready(main);
