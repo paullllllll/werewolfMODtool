@@ -17,7 +17,7 @@
 		
 		{"id":"8", "rName":"Drunk", "team":"Village", "desc":"Normal villager the first two nights, then becomes a randomly assigned role after the third night (out of a pool of a werewolf, villager, and \" most or all other special roles\"", "wake":"3", "villageImpact":"4", "altRules":"Drunk gets to pick role from roles that have died", "inPlay":"false"},
 		
-		{"id":"9", "rName":"Ghost", "team":"Village", "desc":"Elimated the first night, then writes 10 letters at the end of the first night as a \"message from beyond\". Letters are revealed one at a time in order at the beginning of each day. Limitations on writing letters are that it cannot identify players by rName or initials", "wake":"3", "villageImpact":"2", "altRules":"none", "inPlay":"false"},
+		{"id":"9", "rName":"Ghost", "team":"Village", "desc":"Elimated the first night, then writes 10 letters at the end of the first night as a \"message from beyond\". Letters are revealed one at a time in order at the beginning of each day. Limitations on writing letters are that it cannot identify players by name or initials", "wake":"3", "villageImpact":"2", "altRules":"none", "inPlay":"false"},
 		
 		{"id":"10", "rName":"Hoodlum", "team":"Other", "desc":"Picks two players on the first night. If at the end of the game, both those players are dead and the hoodlum is alive, hoodlum wins along with the villagers", "wake":"1", "villageImpact":"0", "altRules":"none", "inPlay":"false"},
 		
