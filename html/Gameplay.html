@@ -3,22 +3,55 @@
     <head>
         <title>Gameplay</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
     <head>
     
     <body>
+        <h1 id="time">First Night</h1>
 
     	<script type="text/javascript">
     		//https://api.myjson.com/bins/1b3ko  Custom Games
-    		//https://api.myjson.com/bins/3dorc All Roles
-    		$.ajax({
-				url: "https://api.myjson.com/bins/3dorc",
-				dataType: 'json',
-				//async: false,
-				success: function(data){
-					console.log(JSON.stringify(data));
-				}
-				
-			});
+    		//https://api.myjson.com/bins/3dorc  All Roles
+            var data;
+            function getRoleData(callback){
+                var data;
+        		$.ajax({
+                    url: "https://api.myjson.com/bins/3dorc",
+    				dataType: 'json',
+    				//async: false,
+    				success: function(data){callback(data)}
+                });
+            }
+
+            function run(){
+
+                // var test = JSON.stringify(data);
+                // console.log(JSON.stringify(data));
+                // console.log("\n\n\n");
+
+                getRoleData(function(data)
+                {
+                    var roles = data;
+                    console.log(JSON.stringify(roles));
+                    
+                    var list = localStorage.
+
+                    firstNight(roles);
+
+                });
+            }
+
+            function firstNight(roles){
+
+                console.log(JSON.stringify(roles));
+
+            }
+
+            // getRoleData(function() {console.log("uhhhhh");});
+            console.log("when did i get here \n\n\n");
+
+            run();
+            
     	</script>
     
     </body>
