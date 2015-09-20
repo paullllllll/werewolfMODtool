@@ -5,6 +5,13 @@ var main = function(){
 	//save();
 };
 
+var displayRole=function(){
+	$('#displayRole').append("<p class='text-center'>You're role is " +list[count-1].role+ "</p>");
+	if(roleList.length<=0){
+		$('#buttons1').append("<a href='./Gameplay.html' class='btn btn-default btn-md'>Start Game</a>");
+	}
+}
+
 /*Sign in Sheet*/
 var signIn = function(){
 	//load();
@@ -20,9 +27,12 @@ var signIn = function(){
 		assignRole();
 		console.log(list[count-1].name + " is a " + list[count-1].role);
 		
-		location.reload();
+		displayRole();
 		save();
 		load();
+		$('#refresh').click(function(){
+			location.reload();
+		});
 	});
 };
 
