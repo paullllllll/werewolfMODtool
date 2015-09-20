@@ -13,6 +13,7 @@ body{
 
 .inListRight{
 	float:left;
+	width:4em;
 }
 
 .clockInputTi{
