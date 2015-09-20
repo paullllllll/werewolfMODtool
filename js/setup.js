@@ -2,8 +2,6 @@ var main = function(){
 	//reset();
 	
 	setup();
-	compileRoles();
-	signIn();
 };
 
 /*Game setup*/
@@ -56,37 +54,13 @@ var setup = function(){
 			location.reload();
 		});
 		
+		compileRoles();
+		custom=false;
+		save();
 	}else if(quick){	//quick setup functions-------------------
 		
 	}
 };
-
-/*Sign in Sheet*/
-var signIn = function(){
-	load();
-	$('#playerNameForm').submit(function(){
-		load();
-		event.preventDefault();
-		list.push({name:$('input:first').val(), role:""});
-		assignRole();
-		console.log(list[count].name + "is a " + list[count].role);
-		count+=1;
-		save();
-		load();
-		
-	});
-};
-
-/*Assign randomized role to Player*/
-var assignRole = function(){
-	load();
-	randIndex=1;//Math.floor(Math.random()*(roleList.length)+1);
-	save();
-	//list[count].role=roleList[randIndex].name;
-	//roleList.splice(randIndex);
-	save();
-	load();
-}
 
 /*Compile list of roles from roleNumList into roleList*/
 var compileRoles = function(){
@@ -165,22 +139,6 @@ var compileRoles = function(){
 }
 
 /*Local Storage Functions*/
-var load = function(){
-	list=JSON.parse(localStorage.getItem('list'));
-	dayLength=parseInt(JSON.parse(localStorage.getItem('dayLength')));
-	pNum=parseInt(JSON.parse(localStorage.getItem('pNum')));
-	pName=JSON.parse(localStorage.getItem('pName'));
-	tempRole=JSON.parse(localStorage.getItem('tempRole'));
-	quick=JSON.parse(localStorage.getItem('quick'));
-	custom=JSON.parse(localStorage.getItem('custom'));
-	customResult=JSON.parse(localStorage.getItem('customResult'));
-	roleNumList=JSON.parse(localStorage.getItem('roleNumList'));
-	tempList=JSON.parse(localStorage.getItem('tempList'));
-	tempPerson=JSON.parse(localStorage.getItem('tempPerson'));
-	count=JSON.parse(localStorage.getItem('count'));
-	roleList=JSON.parse(localStorage.getItem('roleList'));
-	randIndex=parseInt(JSON.parse(localStorage.getItem('randIndex')));
-}
 var save = function(){
 	localStorage.setItem("list", JSON.stringify(list));
 	localStorage.setItem("dayLength", JSON.stringify(dayLength));
@@ -197,6 +155,23 @@ var save = function(){
 	localStorage.setItem("roleList", JSON.stringify(roleList));
 	localStorage.setItem("randIndex", JSON.stringify(randIndex));
 }
+var load = function(){
+	list=JSON.parse(localStorage.getItem('list'));
+	dayLength=parseInt(JSON.parse(localStorage.getItem('dayLength')));
+	pNum=parseInt(JSON.parse(localStorage.getItem('pNum')));
+	pName=JSON.parse(localStorage.getItem('pName'));
+	tempRole=JSON.parse(localStorage.getItem('tempRole'));
+	quick=JSON.parse(localStorage.getItem('quick'));
+	custom=JSON.parse(localStorage.getItem('custom'));
+	customResult=JSON.parse(localStorage.getItem('customResult'));
+	roleNumList=JSON.parse(localStorage.getItem('roleNumList'));
+	tempList=JSON.parse(localStorage.getItem('tempList'));
+	tempPerson=JSON.parse(localStorage.getItem('tempPerson'));
+	count=JSON.parse(localStorage.getItem('count'));
+	roleList=JSON.parse(localStorage.getItem('roleList'));
+	randIndex=parseInt(JSON.parse(localStorage.getItem('randIndex')));
+}
+
 var reset = function(){
 	localStorage.clear();
 	list=[];
@@ -233,7 +208,7 @@ var tempList=[];
 var tempPerson = {};
 var count=0;
 var roleList=[];
-var randIndex=1;
+var randIndex=0;
 
 
 $(document).ready(main);
