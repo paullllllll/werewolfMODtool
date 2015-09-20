@@ -1,6 +1,61 @@
 {
 	"scenarios":[	
 
+		{"numPlayers":"5", 
+		"scenarios":[
+			{"id":"1", 
+			"name":"Village of the Damned", 
+			"roles":[
+				{"name":"Villager", "id":"30", "amount":"2"},
+				{"name":"Seer", "id":"22", "amount":"1"},
+				{"name":"Werewolf", "id":"31", "amount":"1"},
+				{"name":"Cult Leader", "id":"4", "amount":"1"}
+			]},
+			{"id":"2", 
+			"name":"Village of the More Damned", 
+			"roles":[
+				{"name":"Villager", "id":"30", "amount":"2"},
+				{"name":"Seer", "id":"22", "amount":"1"},
+				{"name":"Werewolf", "id":"31", "amount":"1"},
+				{"name":"Lycan", "id":"13", "amount":"1"}
+			]},
+
+			{"id":"3", 
+			"name":"Village of the Extremely Damned", 
+			"roles":[
+				{"name":"Villager", "id":"30", "amount":"2"},
+				{"name":"Seer", "id":"22", "amount":"1"},
+				{"name":"Werewolf", "id":"31", "amount":"1"},
+				{"name":"Tanner", "id":"25", "amount":"1"}
+			]}
+		]},
+
+		{"numPlayers":"6", 
+		"scenarios":[
+			{"id":"1", 
+			"name":"Village of the Dumb", 
+			"roles":[
+				{"name":"Village Idiot", "id":"29", "amount":"1"},
+				{"name":"Seer", "id":"22", "amount":"1"},
+				{"name":"Werewolf", "id":"31", "amount":"1"},
+				{"name":"Cursed", "id":"31", "amount":"1"},
+				{"name":"Hunter", "id":"11", "amount":"1"},
+				{"name":"Cupid", "id":"5", "amount":"1"}
+			]},
+
+			{"id":"2", 
+			"name":"Village of Confusion", 
+			"roles":[
+				{"name":"Lycan", "id":"13", "amount":"1"}
+				{"name":"Seer", "id":"22", "amount":"1"},
+				{"name":"Werewolf", "id":"31", "amount":"1"},
+				{"name":"Doppelgaenger", "id":"7", "amount":"1"},
+				{"name":"Cult Leader", "id":"4", "amount":"1"},
+				{"name":"Cupid", "id":"5", "amount":"1"}
+			]},
+
+		]}
+
 		{"numPlayers":"9", 
 		"villages":[
 			{"id":"1", 
