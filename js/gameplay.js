@@ -205,10 +205,23 @@ var firstNightStart = function (data, allRoleData){
 }
 
 var daytime = function(gameData,roleData){
+     $("#night").hide();
     var daycount=1;
     var timeleft = 360;
+    setInterval(function(){
+        timeleft--;
+        if(timeleft<0){
+            timeleft=0;
+        }
+        $("#timer").text("M:"+Math.floor(timeleft/60)+",  S:"+Math.ceil(timeleft%60));
+    },1000);
+
+    console.log("gotHERE");
+    
     $("#time").text("Day: "+daycount);
-    $("#main").text("Day time is when the players discuss amongst themselves how to proceed, whether they should kill anyone, and if so who");
+    $("#main").text("Day time is when the players discuss amongst themselves how to proceed, whether they should kill anyone, and if so who to kill.");
+
+
 
 };
 
