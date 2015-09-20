@@ -45,7 +45,9 @@ for(var x=0;x<roleData.length;x++){
 				//append Name Target button
 			}
 			$('#buttonClickID').click(function(){
-				//display role team (villager or Werewolf)
+				if(!(/*Villager || Werewolf*/)){
+					//aura present
+				}
 			});
 		}
 	} else if(roleData[x].pName === "Sorceress"){
@@ -75,7 +77,11 @@ for(var x=0;x<roleData.length;x++){
 				//append Name Target button
 			}
 			$('#buttonClickID').click(function(){
-				//display role team (villager or Werewolf)
+				if(/*target is seer*/){
+					//display true
+				} else{
+					//display false
+				}
 			});
 		}
 	} else if(roleData[x].pName === "Body Guard"){
@@ -90,7 +96,9 @@ for(var x=0;x<roleData.length;x++){
 				//append Name Target button
 			}
 			$('#buttonClickID').click(function(){
-				//display role team (villager or Werewolf)
+				//set target to immune
+				//protected="name of target"
+				//remove all immunities come day time
 			});
 		}
 	} else if(roleData[x].pName === "Wolves"){
@@ -105,7 +113,9 @@ for(var x=0;x<roleData.length;x++){
 				//append Name Target button
 			}
 			$('#buttonClickID').click(function(){
-				//display role team (villager or Werewolf)
+				if(/*target name != protected || target is vampire*/){
+					//wolf-target status = dead
+				}
 			});
 		}
 	} else if(roleData[x].pName === "Vampires"){
@@ -120,7 +130,7 @@ for(var x=0;x<roleData.length;x++){
 				//append Name Target button
 			}
 			$('#buttonClickID').click(function(){
-				//display role team (villager or Werewolf)
+				//mark target as bitten
 			});
 		}
 	} else if(roleData[x].pName === "Witch"){
@@ -132,11 +142,15 @@ for(var x=0;x<roleData.length;x++){
 		}
 		for(var y=0;y<roleData.length;y++){
 			if(roleData[x].alive == true){
-				//append Name Target button
+				//if wolf-target, display save or no buttons
 			}
 			$('#buttonClickID').click(function(){
 				//display role team (villager or Werewolf)
 			});
+			if(/*button no chosen*/){
+				//display options for killing or no
+			}
+			//need localstorage of witch ammo
 		}
 	} else if(roleData[x].pName === "Priest"){
 		//display description
@@ -150,7 +164,7 @@ for(var x=0;x<roleData.length;x++){
 				//append Name Target button
 			}
 			$('#buttonClickID').click(function(){
-				//display role team (villager or Werewolf)
+				//target is protected from both werewolf and nomination
 			});
 		}
 	} else if(roleData[x].pName === "Old Hag"){
@@ -165,7 +179,7 @@ for(var x=0;x<roleData.length;x++){
 				//append Name Target button
 			}
 			$('#buttonClickID').click(function(){
-				//display role team (villager or Werewolf)
+				//target is marked as must leave
 			});
 		}
 	} else if(roleData[x].pName === "Cult Leader"){
@@ -180,7 +194,7 @@ for(var x=0;x<roleData.length;x++){
 				//append Name Target button
 			}
 			$('#buttonClickID').click(function(){
-				//display role team (villager or Werewolf)
+				//target joins cult
 			});
 		}
 	}
