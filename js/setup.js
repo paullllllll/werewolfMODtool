@@ -1,4 +1,5 @@
 var main = function(){
+	//reset();
 	setup();
 };
 
@@ -13,24 +14,34 @@ var setup = function(){
 		custom=true;
 	});
 	
-	if(custom){			//custom setup functions
+	if(custom){			//custom setup functions-----------------
 		load();
 		$('#playerNumForm').submit(function(event){
-			console.log('player num submitted'); //debug player num submission
-			
 			load();
 			pNum=$('input:first').val();
 			save();
-			$('#playerNumForm').toggleClass('.hidden');
+			//$('#playerNumForm').toggleClass('.hidden');
+			load();
+			event.preventDefault();
+			console.log('player num submitted: '+pNum); //debug player num submission
+		});
+		
+		
+		$('#rolesForm').submit(function(){		//compile role list
+			load();
+			roleNumList=$(this).serializeArray();
+			save();
+			load();
+			for(var i=0; i<roleNumList.length;i++){ //debug role list values
+				console.log(roleNumList[i]);
+			}
 			event.preventDefault();
 		});
 		
-		var compileRoleList = function(){
-			
-		};
+		//$('#)
 		
 		save();
-	}else if(quick){	//quick setup functions
+	}else if(quick){	//quick setup functions-------------------
 		
 	}
 };
@@ -43,8 +54,8 @@ var signIn = function(){
 /*Local Storage Functions*/
 var load = function(){
 	list=JSON.parse(localStorage.getItem('list'));
-	dayLength=JSON.parse(localStorage.getItem('dayLength'));
-	pNum=JSON.parse(localStorage.getItem('pNum'));
+	dayLength=parseInt(JSON.parse(localStorage.getItem('dayLength')));
+	pNum=parseInt(JSON.parse(localStorage.getItem('pNum')));
 	pName=JSON.parse(localStorage.getItem('pName'));
 	tempRole=JSON.parse(localStorage.getItem('tempRole'));
 	quick=JSON.parse(localStorage.getItem('quick'));
