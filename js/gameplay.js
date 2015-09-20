@@ -4,7 +4,7 @@ Written for WerewolfModTool                         https://api.myjson.com/bins/
 By Team Jacob
 */
 
-function getData(callback){
+var getData = function (callback){
     var data;
 	$.ajax({
         url: "https://api.myjson.com/bins/1rn94",
@@ -15,7 +15,7 @@ function getData(callback){
     });
 }
 
-function run(){
+var run = function (){
 
     getData(function(data){
 
@@ -46,7 +46,17 @@ function run(){
                     desc = data.roles[j].desc;
                 }
             }
-            consolidate.push({ "pId":i, "pName": list[i].pName, "role": list[i].role, "wake" : wake, "vImpact":vImpact, "desc":desc});
+            consolidate.push({  "pId":i, 
+                                "pName": list[i].pName, 
+                                "role": list[i].role, 
+                                "wake" : wake, 
+                                "vImpact":vImpact, 
+                                "desc":desc, 
+                                "alive":true,
+                                "inLove":false,
+                                "canSpeak":true,
+                                "canVote":true,
+                            });
         }
 
         firstNightStart(consolidate, data);
@@ -54,13 +64,15 @@ function run(){
     });
 }
 
-function firstNightStart(data, allRoleData){
+var firstNightStart = function (data, allRoleData){
 
     var firstNightOrder =[];
     var i;
     var firstNightPlayers =[];
     var firstNightBool = [false,false,false,false,false,false,false,false];
     var day = false;
+    var canProceed = true;
+    var ghostWriter;
 
     firstNightOrder.push("Ghost");
     firstNightOrder.push("Hoodlum");
@@ -130,52 +142,64 @@ function firstNightStart(data, allRoleData){
         }
     }
 
-    $("#target").click(function(){
+    $("#night").click(function(){
         if(firstNightBool !== null){
-            $("#target").text("Next Group");
+            $("#night").text("Next Group");
             // console.log("gothere   ");
                 if(firstNightBool[0]==true){
                     $("#main").text("Ghost's Turn - Ghost's Description: "+allRoleData.roles[8].desc);
+
+                    // $("#night").hide();
+                    // $("#main").append('<input type="text" name="Choose 10 Letters" id="ghostInput">');
+                    // $("#ghostInput").submit(function(event){
+                    //     ghostWriter = input;
+                    //     console.log("ghostWriter");
+                    // });
+                    // console.log(ghostWriter);
+
                     firstNightBool[0]=false;
                 }
                 else if(firstNightBool[1]==true){
-                    $("#main").text("Hoodlum's Turn - Ghost's Description: "+allRoleData.roles[8].desc);
+                    $("#main").text("Hoodlum's Turn - Hoodlum's Description: "+allRoleData.roles[9].desc);
                     firstNightBool[1]=false;
                 }
                 else if(firstNightBool[2]==true){
-                    $("#main").text("Doppelgaenger's Turn - Ghost's Description: "+allRoleData.roles[8].desc);
+                    $("#main").text("Doppelgaenger's Turn - Doppelgaenger's Description: "+allRoleData.roles[6].desc);
                     firstNightBool[2]=false;
                 }
                 else if(firstNightBool[3]==true){
-                    $("#main").text("Cupid's Turn - Ghost's Description: "+allRoleData.roles[8].desc);
+                    $("#main").text("Cupid's Turn - Cupid's Description: "+allRoleData.roles[4].desc);
                     firstNightBool[3]=false;
                 }
                 else if(firstNightBool[4]==true){
-                    $("#main").text("Mason's Turn - Ghost's Description: "+allRoleData.roles[8].desc);
+                    $("#main").text("Mason's Turn - Mason's Description: "+allRoleData.roles[13].desc);
                     firstNightBool[4]=false;
                 }
                 else if(firstNightBool[5]==true){
-                    $("#main").text("Seer's Turn - Ghost's Description: "+allRoleData.roles[8].desc);
+                    $("#main").text("Seer's Turn - Seer's Description: "+allRoleData.roles[21].desc);
                     firstNightBool[5]=false;
                 }
                 else if(firstNightBool[6]==true){
-                    $("#main").text("Werewolf's Turn - Ghost's Description: "+allRoleData.roles[8].desc);
+                    $("#main").text("Werewolf's Turn - Werewolf's Description: "+allRoleData.roles[30].desc);
                     firstNightBool[6]=false;
                 }
                 else if(firstNightBool[7]==true){
-                    $("#main").text("Minion's Turn - Ghost's Description: "+allRoleData.roles[8].desc);
+                    $("#main").text("Minion's Turn - Minion's Description: "+allRoleData.roles[15].desc);
                     firstNightBool[7]=false;
                 }
-                else {;}
+                else {
+                    day(data, allRoleData);
+                }
         }
         else{
-
             console.log('not loaded');
-
         }
-        
-
     })
+}
+
+var day = function (gameData, roleData){
+
+    console.log("I am a function");
 
 
 }
