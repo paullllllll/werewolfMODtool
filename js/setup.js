@@ -28,6 +28,15 @@ var setup = function(){
 			location.reload();
 		});
 		
+		$('#clockForm').submit(function(){		//retrieve day length
+			load();
+			dayLength=parseInt($(this).serializeArray()[0].value) * 60 + parseInt($(this).serializeArray()[1].value);	//convert into seconds
+			save();
+			load();
+			console.log(dayLength);
+			event.preventDefault();
+			location.reload();
+		});
 		
 		$('#rolesForm').submit(function(){		//compile role list
 			load();
@@ -41,16 +50,6 @@ var setup = function(){
 			location.reload();
 		});
 		
-		$('#clockForm').submit(function(){		//retrieve day length
-			load();
-			dayLength=parseInt($(this).serializeArray()[0].value) * 60 + parseInt($(this).serializeArray()[1].value);	//convert into seconds
-			save();
-			load();
-			console.log(dayLength);
-			event.preventDefault();
-			location.reload();
-		});
-		
 	}else if(quick){	//quick setup functions-------------------
 		
 	}
@@ -58,8 +57,97 @@ var setup = function(){
 
 /*Sign in Sheet*/
 var signIn = function(){
-	
+	$('#playerNameForm').submit(function(){
+		load();
+		list.push({name:$('input:first').val(), role:"Random"});
+		count+=1;
+		assignRole();
+		save();
+		load();
+		
+	});
 };
+
+/*Assign randomized role to Player*/
+var assignRole = function(){
+	var randIndex=Math.floor(Math.Random()*roleList.length);
+	list[count].role=roleList[randIndex];
+	roleList.splice(randIndex);
+	
+}
+
+/*Compile list of roles from roleNumList into roleList*/
+var compileRoles = function(){
+	for(i=0;i<roleNumList.length;i++){
+		if(roleNumList[i].name === 'WwQuantity'){
+			roleList.push('Werewolf');
+		} else if(roleNumList[i].name === 'LWQuantity'){
+			roleList.push('Lone Wolf');
+		} else if(roleNumList[i].name === 'MinionQuantity'){
+			roleList.push('Minion');
+		} else if(roleNumList[i].name === 'SorcQuantity'){
+			roleList.push('Sorceress');
+		} else if(roleNumList[i].name === 'WwCubQuantity'){
+			roleList.push('Werewolf Cub');
+		} else if(roleNumList[i].name === 'ApSQuantity'){
+			roleList.push('Apprentice Seer');
+		} else if(roleNumList[i].name === 'AuSQuantity'){
+			roleList.push('Aura Seer');
+		} else if(roleNumList[i].name === 'BGQuantity'){
+			roleList.push('Body Guard');
+		} else if(roleNumList[i].name === 'CupidQuantity'){
+			roleList.push('Cupid');
+		} else if(roleNumList[i].name === 'DisQuantity'){
+			roleList.push('Diseased');
+		} else if(roleNumList[i].name === 'DopQuantity'){
+			roleList.push('DoppleGaenger');
+		} else if(roleNumList[i].name === 'DrunkQuantity'){
+			roleList.push('Drunk');
+		} else if(roleNumList[i].name === 'GhostQuantity'){
+			roleList.push('Ghost');
+		} else if(roleNumList[i].name === 'HuntQuantity'){
+			roleList.push('Hunter');
+		} else if(roleNumList[i].name === 'LycanQuantity'){
+			roleList.push('Lycan');
+		} else if(roleNumList[i].name === 'MasonQuantity'){
+			roleList.push('Mason');
+		} else if(roleNumList[i].name === 'MayorQuantity'){
+			roleList.push('Mayor');
+		} else if(roleNumList[i].name === 'OHQuantity'){
+			roleList.push('Old Hag');
+		} else if(roleNumList[i].name === 'PIQuantity'){
+			roleList.push('P.I.');
+		} else if(roleNumList[i].name === 'PacifistQuantity'){
+			roleList.push('Pacifist');
+		} else if(roleNumList[i].name === 'PriestQuantity'){
+			roleList.push('Priest');
+		} else if(roleNumList[i].name === 'PrinceQuantity'){
+			roleList.push('Prince');
+		} else if(roleNumList[i].name === 'SeerQuantity'){
+			roleList.push('Seer');
+		} else if(roleNumList[i].name === 'ScQuantity'){
+			roleList.push('Spellcaster');
+		} else if(roleNumList[i].name === 'TGQuantity'){
+			roleList.push('Tough Guy');
+		} else if(roleNumList[i].name === 'TmQuantity'){
+			roleList.push('Troublemaker');
+		} else if(roleNumList[i].name === 'VilIdQuantity'){
+			roleList.push('Village Idiot');
+		} else if(roleNumList[i].name === 'VilQuantity'){
+			roleList.push('Villager');
+		} else if(roleNumList[i].name === 'WitchQuantity'){
+			roleList.push('Witch');
+		} else if(roleNumList[i].name === 'CLQuantity'){
+			roleList.push('Cult Leader');
+		} else if(roleNumList[i].name === 'HoodQuantity'){
+			roleList.push('Hoodlum');
+		} else if(roleNumList[i].name === 'TanQuantity'){
+			roleList.push('Tanner');
+		} else if(roleNumList[i].name === 'VampQuantity'){
+			roleList.push('Vampire');
+		}
+	}
+}
 
 /*Local Storage Functions*/
 var load = function(){
@@ -73,6 +161,9 @@ var load = function(){
 	customResult=JSON.parse(localStorage.getItem('customResult'));
 	roleNumList=JSON.parse(localStorage.getItem('roleNumList'));
 	tempList=JSON.parse(localStorage.getItem('tempList'));
+	tempPerson=JSON.parse(localStorage.getItem('tempPerson'));
+	count=JSON.parse(localStorage.getItem('count'));
+	roleList=JSON.parse(localStorage.getItem('roleList'));
 }
 var save = function(){
 	localStorage.setItem("list", JSON.stringify(list));
@@ -85,6 +176,9 @@ var save = function(){
 	localStorage.setItem("customResult", JSON.stringify(customResult));
 	localStorage.setItem("roleNumList", JSON.stringify(roleNumList));
 	localStorage.setItem("tempList", JSON.stringify(tempList));
+	localStorage.setItem("tempPerson", JSON.stringify(tempPerson));
+	localStorage.setItem("count", JSON.stringify(count));
+	localStorage.setItem("roleList", JSON.stringify(roleList));
 }
 var reset = function(){
 	localStorage.clear();
@@ -94,6 +188,7 @@ var reset = function(){
 }
 
 /*Initialize Variables*/
+
 
 var list=[];
 var dayLength=0;
@@ -105,5 +200,8 @@ var custom=true;
 var customResult=Object();
 var roleNumList=[];
 var tempList=[];
+var tempPerson = {};
+var count=0;
+var roleList=[];
 
 $(document).ready(main);
