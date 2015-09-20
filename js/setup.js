@@ -2,10 +2,13 @@ var main = function(){
 	//reset();
 	
 	setup();
+	compileRoles();
+	signIn();
 };
 
 /*Game setup*/
 var setup = function(){
+	
 	$('#quickSetup').click(function(){
 		quick=true;
 		custom=false;
@@ -59,9 +62,10 @@ var setup = function(){
 var signIn = function(){
 	$('#playerNameForm').submit(function(){
 		load();
-		list.push({name:$('input:first').val(), role:"Random"});
-		count+=1;
+		list.push({name:$('input:first').val(), role:"null"});
 		assignRole();
+		console.log(list[count].name + "is a " + list[count].role);
+		count+=1;
 		save();
 		load();
 		
@@ -70,83 +74,88 @@ var signIn = function(){
 
 /*Assign randomized role to Player*/
 var assignRole = function(){
+	load();
 	var randIndex=Math.floor(Math.Random()*roleList.length);
-	list[count].role=roleList[randIndex];
+	list[count].role=roleList[randIndex].name;
 	roleList.splice(randIndex);
-	
+	save();
+	load();
 }
 
 /*Compile list of roles from roleNumList into roleList*/
 var compileRoles = function(){
+	load();
 	for(i=0;i<roleNumList.length;i++){
 		if(roleNumList[i].name === 'WwQuantity'){
-			roleList.push('Werewolf');
+			for(var j=0;j<roleNumList[i].value;j++){roleList.push('Werewolf');}
 		} else if(roleNumList[i].name === 'LWQuantity'){
-			roleList.push('Lone Wolf');
+			for(var j=0;j<roleNumList[i].value;j++){roleList.push('Lone Wolf');}
 		} else if(roleNumList[i].name === 'MinionQuantity'){
-			roleList.push('Minion');
+			for(var j=0;j<roleNumList[i].value;j++){roleList.push('Minion');}
 		} else if(roleNumList[i].name === 'SorcQuantity'){
-			roleList.push('Sorceress');
+			for(var j=0;j<roleNumList[i].value;j++){roleList.push('Sorceress');}
 		} else if(roleNumList[i].name === 'WwCubQuantity'){
-			roleList.push('Werewolf Cub');
+			for(var j=0;j<roleNumList[i].value;j++){roleList.push('Werewolf Cub');}
 		} else if(roleNumList[i].name === 'ApSQuantity'){
-			roleList.push('Apprentice Seer');
+			for(var j=0;j<roleNumList[i].value;j++){roleList.push('Apprentice Seer');}
 		} else if(roleNumList[i].name === 'AuSQuantity'){
-			roleList.push('Aura Seer');
+			for(var j=0;j<roleNumList[i].value;j++){roleList.push('Aura Seer');}
 		} else if(roleNumList[i].name === 'BGQuantity'){
-			roleList.push('Body Guard');
+			for(var j=0;j<roleNumList[i].value;j++){roleList.push('Body Guard');}
 		} else if(roleNumList[i].name === 'CupidQuantity'){
-			roleList.push('Cupid');
+			for(var j=0;j<roleNumList[i].value;j++){roleList.push('Cupid');}
 		} else if(roleNumList[i].name === 'DisQuantity'){
-			roleList.push('Diseased');
+			for(var j=0;j<roleNumList[i].value;j++){roleList.push('Diseased');}
 		} else if(roleNumList[i].name === 'DopQuantity'){
-			roleList.push('DoppleGaenger');
+			for(var j=0;j<roleNumList[i].value;j++){roleList.push('DoppleGaenger');}
 		} else if(roleNumList[i].name === 'DrunkQuantity'){
-			roleList.push('Drunk');
+			for(var j=0;j<roleNumList[i].value;j++){roleList.push('Drunk');}
 		} else if(roleNumList[i].name === 'GhostQuantity'){
-			roleList.push('Ghost');
+			for(var j=0;j<roleNumList[i].value;j++){roleList.push('Ghost');}
 		} else if(roleNumList[i].name === 'HuntQuantity'){
-			roleList.push('Hunter');
+			for(var j=0;j<roleNumList[i].value;j++){roleList.push('Hunter');}
 		} else if(roleNumList[i].name === 'LycanQuantity'){
-			roleList.push('Lycan');
+			for(var j=0;j<roleNumList[i].value;j++){roleList.push('Lycan');}
 		} else if(roleNumList[i].name === 'MasonQuantity'){
-			roleList.push('Mason');
+			for(var j=0;j<roleNumList[i].value;j++){roleList.push('Mason');}
 		} else if(roleNumList[i].name === 'MayorQuantity'){
-			roleList.push('Mayor');
+			for(var j=0;j<roleNumList[i].value;j++){roleList.push('Mayor');}
 		} else if(roleNumList[i].name === 'OHQuantity'){
-			roleList.push('Old Hag');
+			for(var j=0;j<roleNumList[i].value;j++){roleList.push('Old Hag');}
 		} else if(roleNumList[i].name === 'PIQuantity'){
-			roleList.push('P.I.');
+			for(var j=0;j<roleNumList[i].value;j++){roleList.push('P.I.');}
 		} else if(roleNumList[i].name === 'PacifistQuantity'){
-			roleList.push('Pacifist');
+			for(var j=0;j<roleNumList[i].value;j++){roleList.push('Pacifist');}
 		} else if(roleNumList[i].name === 'PriestQuantity'){
-			roleList.push('Priest');
+			for(var j=0;j<roleNumList[i].value;j++){roleList.push('Priest');}
 		} else if(roleNumList[i].name === 'PrinceQuantity'){
-			roleList.push('Prince');
+			for(var j=0;j<roleNumList[i].value;j++){roleList.push('Prince');}
 		} else if(roleNumList[i].name === 'SeerQuantity'){
-			roleList.push('Seer');
+			for(var j=0;j<roleNumList[i].value;j++){roleList.push('Seer');}
 		} else if(roleNumList[i].name === 'ScQuantity'){
-			roleList.push('Spellcaster');
+			for(var j=0;j<roleNumList[i].value;j++){roleList.push('Spellcaster');}
 		} else if(roleNumList[i].name === 'TGQuantity'){
-			roleList.push('Tough Guy');
+			for(var j=0;j<roleNumList[i].value;j++){roleList.push('Tough Guy');}
 		} else if(roleNumList[i].name === 'TmQuantity'){
-			roleList.push('Troublemaker');
+			for(var j=0;j<roleNumList[i].value;j++){roleList.push('Troublemaker');}
 		} else if(roleNumList[i].name === 'VilIdQuantity'){
-			roleList.push('Village Idiot');
+			for(var j=0;j<roleNumList[i].value;j++){roleList.push('Village Idiot');}
 		} else if(roleNumList[i].name === 'VilQuantity'){
-			roleList.push('Villager');
+			for(var j=0;j<roleNumList[i].value;j++){roleList.push('Villager');}
 		} else if(roleNumList[i].name === 'WitchQuantity'){
-			roleList.push('Witch');
+			for(var j=0;j<roleNumList[i].value;j++){roleList.push('Witch');}
 		} else if(roleNumList[i].name === 'CLQuantity'){
-			roleList.push('Cult Leader');
+			for(var j=0;j<roleNumList[i].value;j++){roleList.push('Cult Leader');}
 		} else if(roleNumList[i].name === 'HoodQuantity'){
-			roleList.push('Hoodlum');
+			for(var j=0;j<roleNumList[i].value;j++){roleList.push('Hoodlum');}
 		} else if(roleNumList[i].name === 'TanQuantity'){
-			roleList.push('Tanner');
+			for(var j=0;j<roleNumList[i].value;j++){roleList.push('Tanner');}
 		} else if(roleNumList[i].name === 'VampQuantity'){
-			roleList.push('Vampire');
+			for(var j=0;j<roleNumList[i].value;j++){roleList.push('Vampire');}
 		}
 	}
+	save();
+	load();
 }
 
 /*Local Storage Functions*/
